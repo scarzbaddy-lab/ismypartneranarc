@@ -1,0 +1,1080 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Is My Partner a Narcissist? Free Assessment | Unscarred</title>
+    <meta name="description" content="Take this honest assessment to understand your relationship dynamics. Free quiz reveals what you might be missing about yourself and your partner.">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+            line-height: 1.6;
+            color: #2c3e50;
+            background: #f8f9fa;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            background: white;
+            padding: 40px;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+
+        h1 {
+            font-size: 2.5rem;
+            margin-bottom: 10px;
+            color: #1a1a1a;
+            font-weight: 600;
+        }
+
+        .subtitle {
+            font-size: 1.1rem;
+            color: #666;
+            margin-bottom: 40px;
+            line-height: 1.5;
+        }
+
+        .quiz-section {
+            display: none;
+        }
+
+        .quiz-section.active {
+            display: block;
+        }
+
+        .question {
+            margin-bottom: 40px;
+        }
+
+        .question-number {
+            font-size: 0.9rem;
+            color: #999;
+            margin-bottom: 8px;
+        }
+
+        .question-text {
+            font-size: 1.2rem;
+            margin-bottom: 20px;
+            color: #1a1a1a;
+            font-weight: 500;
+        }
+
+        .answer-option {
+            display: block;
+            padding: 15px;
+            margin-bottom: 12px;
+            background: #f8f9fa;
+            border: 2px solid #e9ecef;
+            border-radius: 6px;
+            cursor: pointer;
+            transition: all 0.2s;
+        }
+
+        .answer-option:hover {
+            border-color: #2c3e50;
+            background: #f1f3f5;
+        }
+
+        .answer-option input[type="radio"] {
+            margin-right: 12px;
+            cursor: pointer;
+        }
+
+        .answer-option label {
+            cursor: pointer;
+            display: inline;
+        }
+
+        .navigation {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 40px;
+            padding-top: 20px;
+            border-top: 1px solid #e9ecef;
+        }
+
+        .btn {
+            padding: 12px 30px;
+            border: none;
+            border-radius: 4px;
+            font-size: 1rem;
+            cursor: pointer;
+            font-weight: 500;
+        }
+
+        .btn-secondary {
+            background: #e9ecef;
+            color: #495057;
+        }
+
+        .btn-secondary:hover {
+            background: #dee2e6;
+        }
+
+        .btn-primary {
+            background: #2c3e50;
+            color: white;
+        }
+
+        .btn-primary:hover {
+            background: #34495e;
+        }
+
+        .btn:disabled {
+            opacity: 0.5;
+            cursor: not-allowed;
+        }
+
+        .progress-bar {
+            width: 100%;
+            height: 4px;
+            background: #e9ecef;
+            margin-bottom: 30px;
+            border-radius: 2px;
+            overflow: hidden;
+        }
+
+        .progress-fill {
+            height: 100%;
+            background: #2c3e50;
+            transition: width 0.3s;
+        }
+
+        .result-page {
+            display: none;
+        }
+
+        .result-page.active {
+            display: block;
+        }
+
+        .result-header {
+            margin-bottom: 30px;
+            padding-bottom: 20px;
+            border-bottom: 2px solid #e9ecef;
+        }
+
+        .result-title {
+            font-size: 2rem;
+            margin-bottom: 10px;
+            color: #1a1a1a;
+        }
+
+        .result-subtitle {
+            font-size: 1.2rem;
+            color: #666;
+        }
+
+        .result-content {
+            line-height: 1.8;
+        }
+
+        .result-content h3 {
+            font-size: 1.3rem;
+            margin: 30px 0 15px 0;
+            color: #1a1a1a;
+        }
+
+        .result-content h4 {
+            font-size: 1.1rem;
+            margin: 20px 0 10px 0;
+            color: #2c3e50;
+        }
+
+        .result-content p {
+            margin-bottom: 20px;
+        }
+
+        .result-content ul {
+            margin: 20px 0;
+            padding-left: 20px;
+        }
+
+        .result-content li {
+            margin-bottom: 10px;
+        }
+
+        .result-content strong {
+            color: #2c3e50;
+        }
+
+        .arrow {
+            color: #2c3e50;
+            font-weight: bold;
+        }
+
+        .cta-button {
+            display: inline-block;
+            background: #2c3e50;
+            color: white;
+            padding: 15px 40px;
+            text-decoration: none;
+            border-radius: 4px;
+            font-weight: 500;
+            margin-top: 30px;
+            transition: background 0.2s;
+        }
+
+        .cta-button:hover {
+            background: #34495e;
+        }
+
+        @media (max-width: 768px) {
+            .container {
+                padding: 20px;
+            }
+
+            h1 {
+                font-size: 2rem;
+            }
+
+            .navigation {
+                flex-direction: column;
+                gap: 10px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- Quiz Header -->
+        <div id="quizHeader">
+            <h1>Is My Partner a Narcissist?</h1>
+            <p class="subtitle">This assessment reveals what you might be missing about your relationship dynamics, including patterns you're bringing to the table.</p>
+        </div>
+
+        <!-- Quiz Section -->
+        <div id="quizSection" class="quiz-section active">
+            <div class="progress-bar">
+                <div id="progressFill" class="progress-fill" style="width: 0%"></div>
+            </div>
+            
+            <div id="questionsContainer"></div>
+
+            <div class="navigation">
+                <button class="btn btn-secondary" id="prevBtn" onclick="previousQuestion()" disabled>Previous</button>
+                <button class="btn btn-primary" id="nextBtn" onclick="nextQuestion()" disabled>Next</button>
+            </div>
+        </div>
+
+        <!-- Result Page -->
+        <div id="resultPage" class="result-page"></div>
+    </div>
+
+    <script>
+        const questions = [
+            {
+                type: "normal",
+                text: "Your partner tells you they're going to bed early because they're exhausted, even though you wanted to talk tonight. Your honest first thought:",
+                answers: [
+                    { text: "They're avoiding me, something's wrong with us", value: "a", anxious: 1 },
+                    { text: "If they really cared they'd make time even when tired", value: "b", anxious: 1 },
+                    { text: "They're tired, we can talk tomorrow", value: "c", secure: 1 },
+                    { text: "They're probably upset with me and using sleep as an excuse", value: "d", anxious: 1 }
+                ]
+            },
+            {
+                type: "ambiguous",
+                text: "Your partner gets quieter and more distant when they're stressed about work. When this happens, you think:",
+                answers: [
+                    { text: "They're pulling away from me, I need to connect with them", value: "a" },
+                    { text: "This is how they process stress, I should give them room", value: "b", secure: 1 },
+                    { text: "They're shutting me out, they don't trust me enough to share", value: "c" },
+                    { text: "They always use stress as an excuse to disconnect", value: "d" }
+                ]
+            },
+            {
+                type: "toxic",
+                text: "During arguments, your partner tells you you're \"too sensitive\" or \"overreacting\" when you express hurt. Your internal response:",
+                answers: [
+                    { text: "Maybe I am too sensitive, I should calm down", value: "a", boundary_deficit: 1 },
+                    { text: "They're invalidating my feelings to avoid accountability", value: "b", accurate: 1 },
+                    { text: "I need to explain better so they understand why I'm hurt", value: "c", boundary_deficit: 1 },
+                    { text: "They always dismiss me when they don't want to deal with their impact", value: "d", accurate: 1 }
+                ]
+            },
+            {
+                type: "normal",
+                text: "Your partner mentions an ex casually in conversation (not comparing, just a neutral story). What's your honest reaction?",
+                answers: [
+                    { text: "Why are they bringing up their ex? Are they still thinking about them?", value: "a", anxious: 1 },
+                    { text: "That's a normal part of their past, it doesn't threaten me", value: "b", secure: 1 },
+                    { text: "They shouldn't be talking about exes, it's disrespectful", value: "c", anxious: 1 },
+                    { text: "I feel insecure when they mention their ex even though I know it's irrational", value: "d", anxious: 1 }
+                ]
+            },
+            {
+                type: "ambiguous",
+                text: "Your partner scrolls on their phone while you're talking about your day. You think:",
+                answers: [
+                    { text: "They're not interested in me, I'm boring to them", value: "a" },
+                    { text: "This is rude, they should be present when I'm talking", value: "b" },
+                    { text: "They're probably distracted, I should ask if now's a good time", value: "c", secure: 1 },
+                    { text: "They never really listen, they just wait for their turn to talk", value: "d" }
+                ]
+            },
+            {
+                type: "toxic",
+                text: "Your partner brings up mistakes you made months ago during current arguments. When they do this, you think:",
+                answers: [
+                    { text: "I did hurt them, so I understand why they're still upset", value: "a", boundary_deficit: 1 },
+                    { text: "This is weaponizing my past to avoid dealing with the present issue", value: "b", accurate: 1 },
+                    { text: "I need to keep apologizing until they really forgive me", value: "c", boundary_deficit: 1 },
+                    { text: "They do this every time they don't want to take responsibility", value: "d", accurate: 1 }
+                ]
+            },
+            {
+                type: "normal",
+                text: "Your partner doesn't text back for 3-4 hours while they're at work or with friends. What's your honest internal reaction?",
+                answers: [
+                    { text: "Something's wrong, I need to keep texting until they respond", value: "a", anxious: 1 },
+                    { text: "They're probably talking to someone else", value: "b", anxious: 1 },
+                    { text: "If they cared they'd check in, this feels dismissive", value: "c", anxious: 1 },
+                    { text: "They're busy, I'll hear from them when they're free", value: "d", secure: 1 }
+                ]
+            },
+            {
+                type: "ambiguous",
+                text: "During a disagreement, your partner says \"I need space\" and doesn't respond to your texts for 6 hours. What do you think?",
+                answers: [
+                    { text: "They're processing, I should respect that", value: "a" },
+                    { text: "This is silent treatment, they're punishing me", value: "b" },
+                    { text: "I must have really hurt them, I need to apologize and fix this", value: "c" },
+                    { text: "They always do this when they don't want to deal with things", value: "d" }
+                ]
+            },
+            {
+                type: "toxic",
+                text: "Your partner frequently \"forgets\" plans that are important to you, but never forgets things that matter to them. You think:",
+                answers: [
+                    { text: "They're just forgetful, I shouldn't take it personally", value: "a", boundary_deficit: 1 },
+                    { text: "This shows where their priorities are - I'm not one of them", value: "b", accurate: 1 },
+                    { text: "I should remind them more or make it easier for them to remember", value: "c", boundary_deficit: 1 },
+                    { text: "They remember what they want to remember, this is selective", value: "d", accurate: 1 }
+                ]
+            },
+            {
+                type: "normal",
+                text: "Your partner wants to spend Saturday with their friends instead of with you. Your first thought:",
+                answers: [
+                    { text: "We should want to spend all our free time together", value: "a", anxious: 1 },
+                    { text: "They're choosing their friends over me", value: "b", anxious: 1 },
+                    { text: "That's healthy, we don't need to be together constantly", value: "c", secure: 1 },
+                    { text: "If I was enough for them, they wouldn't need other people", value: "d", anxious: 1 }
+                ]
+            },
+            {
+                type: "ambiguous",
+                text: "Your partner seems less interested in sex lately. What's your internal narrative?",
+                answers: [
+                    { text: "They're not attracted to me anymore", value: "a" },
+                    { text: "Something's going on - stress, health, something else - I should ask", value: "b", secure: 1 },
+                    { text: "They're probably getting it somewhere else", value: "c" },
+                    { text: "I'm not doing enough to keep their interest", value: "d" }
+                ]
+            },
+            {
+                type: "toxic",
+                text: "When you try to set a boundary, your partner gets visibly upset, withdraws, or makes you feel guilty. You think:",
+                answers: [
+                    { text: "Maybe my boundary is unreasonable, I should reconsider", value: "a", boundary_deficit: 1 },
+                    { text: "My boundaries make them uncomfortable because they benefit from me not having them", value: "b", accurate: 1 },
+                    { text: "I should find a softer way to communicate my needs", value: "c", boundary_deficit: 1 },
+                    { text: "They can't handle me having any needs that inconvenience them", value: "d", accurate: 1 }
+                ]
+            },
+            {
+                type: "normal",
+                text: "Your partner doesn't want to post about your relationship on social media. Your honest reaction:",
+                answers: [
+                    { text: "They must be hiding me or keeping their options open", value: "a", anxious: 1 },
+                    { text: "They're private about their personal life, that's their choice", value: "b", secure: 1 },
+                    { text: "If they were proud of me, they'd want to show me off", value: "c", anxious: 1 },
+                    { text: "This makes me feel insecure even though I know social media doesn't matter", value: "d", anxious: 1 }
+                ]
+            },
+            {
+                type: "ambiguous",
+                text: "Your partner gets defensive when you bring up something that bothered you. You think:",
+                answers: [
+                    { text: "I must have brought it up the wrong way", value: "a" },
+                    { text: "They can't handle any criticism without shutting down", value: "b" },
+                    { text: "Maybe this isn't the right time, I should wait", value: "c" },
+                    { text: "They always make me the bad guy when I have a concern", value: "d" }
+                ]
+            },
+            {
+                type: "toxic",
+                text: "Your partner tells you that things you remember happening \"never happened\" or you're \"remembering wrong.\" Your internal response:",
+                answers: [
+                    { text: "Maybe I am remembering wrong, my memory isn't perfect", value: "a", boundary_deficit: 1 },
+                    { text: "They're rewriting history to avoid accountability", value: "b", accurate: 1 },
+                    { text: "I must be confusing this with something else", value: "c", boundary_deficit: 1 },
+                    { text: "They gaslight me constantly but I can't prove it", value: "d", accurate: 1 }
+                ]
+            },
+            {
+                type: "normal",
+                text: "Your partner doesn't always respond enthusiastically to your ideas or interests. You think:",
+                answers: [
+                    { text: "They should be excited about things I'm excited about", value: "a", anxious: 1 },
+                    { text: "They don't have to share all my interests, they have their own", value: "b", secure: 1 },
+                    { text: "If they loved me, they'd care more about what I care about", value: "c", anxious: 1 },
+                    { text: "They think my interests are stupid but won't say it", value: "d", anxious: 1 }
+                ]
+            },
+            {
+                type: "ambiguous",
+                text: "Your partner seems irritated or short with you for no clear reason. What's your internal reaction?",
+                answers: [
+                    { text: "What did I do? I need to figure out what's wrong", value: "a" },
+                    { text: "They're having a bad day, it's probably not about me", value: "b", secure: 1 },
+                    { text: "They're mad at me and won't just say it", value: "c" },
+                    { text: "I always have to walk on eggshells around their moods", value: "d" }
+                ]
+            },
+            {
+                type: "toxic",
+                text: "Your partner compares you unfavorably to other people (exes, friends, strangers). When this happens, you think:",
+                answers: [
+                    { text: "Maybe I should work on being more like that", value: "a", boundary_deficit: 1 },
+                    { text: "This is designed to make me feel inadequate and try harder", value: "b", accurate: 1 },
+                    { text: "They're just being honest about what they want", value: "c", boundary_deficit: 1 },
+                    { text: "Nothing I do is ever good enough for them", value: "d", accurate: 1 }
+                ]
+            },
+            {
+                type: "normal",
+                text: "Your partner disagrees with you about something and explains their different perspective. Your honest thought:",
+                answers: [
+                    { text: "If we were really compatible, we'd agree on this", value: "a", anxious: 1 },
+                    { text: "Disagreement is normal, we can have different views", value: "b", secure: 1 },
+                    { text: "They're always contradicting me, they can't just agree", value: "c", anxious: 1 },
+                    { text: "I feel attacked when they don't see things my way", value: "d", anxious: 1 }
+                ]
+            },
+            {
+                type: "ambiguous",
+                text: "Your partner doesn't always comfort you the way you want when you're upset. You think:",
+                answers: [
+                    { text: "They don't care about my feelings", value: "a" },
+                    { text: "They might not know what I need, I should tell them", value: "b", secure: 1 },
+                    { text: "If they really loved me, they'd know what I need without asking", value: "c" },
+                    { text: "They're emotionally unavailable and can't handle my emotions", value: "d" }
+                ]
+            }
+        ];
+
+        let currentQuestion = 0;
+        let userAnswers = [];
+
+        // Auto-start quiz on page load
+        window.onload = function() {
+            renderQuestion();
+        };
+
+        function renderQuestion() {
+            const question = questions[currentQuestion];
+            const container = document.getElementById('questionsContainer');
+            
+            container.innerHTML = `
+                <div class="question">
+                    <div class="question-number">Question ${currentQuestion + 1} of ${questions.length}</div>
+                    <div class="question-text">${question.text}</div>
+                    ${question.answers.map((answer, index) => `
+                        <div class="answer-option">
+                            <input type="radio" 
+                                   id="q${currentQuestion}_${index}" 
+                                   name="question${currentQuestion}" 
+                                   value="${answer.value}"
+                                   ${userAnswers[currentQuestion] === answer.value ? 'checked' : ''}
+                                   onchange="selectAnswer('${answer.value}')">
+                            <label for="q${currentQuestion}_${index}">${answer.text}</label>
+                        </div>
+                    `).join('')}
+                </div>
+            `;
+
+            updateProgress();
+            updateButtons();
+        }
+
+        function selectAnswer(value) {
+            userAnswers[currentQuestion] = value;
+            updateButtons();
+        }
+
+        function updateProgress() {
+            const progress = ((currentQuestion + 1) / questions.length) * 100;
+            document.getElementById('progressFill').style.width = progress + '%';
+        }
+
+        function updateButtons() {
+            document.getElementById('prevBtn').disabled = currentQuestion === 0;
+            document.getElementById('nextBtn').disabled = !userAnswers[currentQuestion];
+            
+            if (currentQuestion === questions.length - 1 && userAnswers[currentQuestion]) {
+                document.getElementById('nextBtn').textContent = 'See Results';
+            } else {
+                document.getElementById('nextBtn').textContent = 'Next';
+            }
+        }
+
+        function nextQuestion() {
+            if (currentQuestion < questions.length - 1) {
+                currentQuestion++;
+                renderQuestion();
+            } else {
+                calculateResults();
+            }
+        }
+
+        function previousQuestion() {
+            if (currentQuestion > 0) {
+                currentQuestion--;
+                renderQuestion();
+            }
+        }
+
+        function calculateResults() {
+            let anxiousScore = 0;
+            let boundaryDeficitScore = 0;
+            let accurateScore = 0;
+            let secureScore = 0;
+
+            userAnswers.forEach((answer, index) => {
+                const question = questions[index];
+                const selectedAnswer = question.answers.find(a => a.value === answer);
+                
+                if (selectedAnswer) {
+                    anxiousScore += selectedAnswer.anxious || 0;
+                    boundaryDeficitScore += selectedAnswer.boundary_deficit || 0;
+                    accurateScore += selectedAnswer.accurate || 0;
+                    secureScore += selectedAnswer.secure || 0;
+                }
+            });
+
+            displayResults(anxiousScore, boundaryDeficitScore, accurateScore, secureScore);
+        }
+
+        function displayResults(anxious, boundary, accurate, secure) {
+            document.getElementById('quizSection').style.display = 'none';
+            const resultPage = document.getElementById('resultPage');
+            resultPage.classList.add('active');
+
+            let resultHTML = getResultContent(anxious, boundary, accurate, secure);
+            resultPage.innerHTML = resultHTML;
+
+            console.log('Scores:', { anxious, boundary, accurate, secure });
+        }
+
+        function getResultContent(anxious, boundary, accurate, secure) {
+            // Result A: Your Anxiety Is The Problem
+            if (anxious >= 5 && boundary <= 2 && accurate >= 4) {
+                return `
+                    <div class="result-header">
+                        <h1 class="result-title">Your Anxiety Is The Problem</h1>
+                        <p class="result-subtitle">You're overreacting to normal behavior while correctly identifying what actual manipulation looks like</p>
+                    </div>
+                    <div class="result-content">
+                        <p>Here's what your answers revealed: <strong>Your partner isn't the narcissist. Your anxiety is making you interpret normal, healthy behavior as threats.</strong></p>
+
+                        <h3>What you're doing:</h3>
+                        <ul>
+                            <li>Catastrophizing when they need sleep, space, or time with friends</li>
+                            <li>Interpreting hours without texting as abandonment or cheating</li>
+                            <li>Seeing their need for autonomy as rejection</li>
+                            <li>Making their normal boundaries about you</li>
+                        </ul>
+
+                        <h3>But here's what you got right:</h3>
+                        <p>You CAN spot actual manipulation. When presented with gaslighting, boundary violations, and weaponized guilt, you identified them correctly. This means <strong>you're not in an abusive relationship - you're anxious in a normal one.</strong></p>
+
+                        <h3>How this lands on your partner:</h3>
+                        <ul>
+                            <li>They feel suffocated by your need for constant contact and reassurance</li>
+                            <li>They can't have basic autonomy without triggering your panic</li>
+                            <li>They feel accused of things they're not doing</li>
+                            <li>They're exhausted from managing your anxiety about normal life</li>
+                        </ul>
+
+                        <h3>The brutal truth:</h3>
+                        <p>You came here looking for validation that they're a narcissist. Your answers show that <strong>you're the one struggling with normal relationship dynamics.</strong> That doesn't make you bad - it makes you anxiously attached and needing help.</p>
+
+                        <h3>What you actually need:</h3>
+                        <ul>
+                            <li><strong>Anxious attachment healing</strong> - Learn to self-soothe instead of seeking constant external validation</li>
+                            <li><strong>Individual therapy</strong> - Your partner can't fix your anxiety, and asking them to is unfair</li>
+                            <li><strong>Build identity outside the relationship</strong> - Your world is too small if your partner's every move feels like a threat</li>
+                        </ul>
+
+                        <p><strong>The good news:</strong> You're not being abused. You're just anxious. That's fixable if you're willing to do the work.</p>
+
+                        <a href="#" class="cta-button">Get Help With Anxious Attachment</a>
+                    </div>
+                `;
+            }
+
+            // Result B: You're Excusing Real Harm
+            if (anxious <= 2 && boundary >= 4 && accurate <= 2) {
+                return `
+                    <div class="result-header">
+                        <h1 class="result-title">You're Excusing Real Harm</h1>
+                        <p class="result-subtitle">You're not particularly anxious - you're taking blame for manipulation you can't see</p>
+                    </div>
+                    <div class="result-content">
+                        <p>Your answers revealed something concerning: <strong>You're not overreacting to normal behavior. You're under-reacting to harmful behavior.</strong></p>
+
+                        <h3>What's happening:</h3>
+                        <p>When your partner:</p>
+                        <ul>
+                            <li>Calls you "too sensitive" → You think you need to calm down</li>
+                            <li>Brings up your past mistakes to win arguments → You think you deserve it</li>
+                            <li>"Forgets" what matters to you → You think you should remind them more</li>
+                            <li>Punishes your boundaries → You think your boundaries are unreasonable</li>
+                            <li>Tells you things "never happened" → You doubt your own memory</li>
+                            <li>Compares you unfavorably to others → You think you should try harder</li>
+                        </ul>
+
+                        <p><strong>Every single one of these is manipulation. And you're taking the blame for all of it.</strong></p>
+
+                        <h3>Why you can't see it:</h3>
+                        <p>You've been systematically trained to:</p>
+                        <ul>
+                            <li>Doubt your perception</li>
+                            <li>Take responsibility for their behavior</li>
+                            <li>Believe your needs are unreasonable</li>
+                            <li>Accept treatment that violates you</li>
+                        </ul>
+
+                        <h3>The brutal truth:</h3>
+                        <p>You didn't come here anxious and overreacting. You came here already broken down by someone who's been gaslighting you into thinking their abuse is your fault.</p>
+
+                        <h3>What you need to understand:</h3>
+                        <ul>
+                            <li><strong>Gaslighting is real</strong> - They ARE rewriting history, you're not crazy</li>
+                            <li><strong>Weaponizing your past is abuse</strong> - You don't owe infinite apologies</li>
+                            <li><strong>Punishing boundaries is manipulation</strong> - Your needs aren't unreasonable</li>
+                            <li><strong>Invalidation is a tactic</strong> - You're not "too sensitive," you're being dismissed</li>
+                        </ul>
+
+                        <h3>What you actually need:</h3>
+                        <ul>
+                            <li><strong>Learn to recognize manipulation</strong> - What's happening to you has a name</li>
+                            <li><strong>Trauma bond work</strong> - You're probably biochemically addicted to this cycle</li>
+                            <li><strong>Exit strategy or radical boundary work</strong> - This will not get better without intervention</li>
+                            <li><strong>Professional support</strong> - You need help seeing what you've been trained not to see</li>
+                        </ul>
+
+                        <p><strong>You're not in a difficult relationship. You're describing abuse.</strong></p>
+
+                        <a href="#" class="cta-button">Learn About Gaslighting & Manipulation</a>
+                    </div>
+                `;
+            }
+
+            // Result C: Both Things Are True (most common)
+            if (anxious >= 4 && boundary >= 2 && boundary <= 4 && accurate >= 3) {
+                return `
+                    <div class="result-header">
+                        <h1 class="result-title">Both Things Are True</h1>
+                        <p class="result-subtitle">The Anxious Partner in a Toxic Relationship</p>
+                    </div>
+                    <div class="result-content">
+                        <p>Here's what your answers revealed: <strong>You're anxious AND they're manipulating you. Both things are happening simultaneously.</strong></p>
+
+                        <h3>What YOU'RE bringing:</h3>
+                        <h4>Catastrophic interpretation of normal behavior:</h4>
+                        <p>When they go to bed early, don't text for hours, or want time with friends, your brain jumps to "they're avoiding me," "they're cheating," "they're hiding me." This is YOUR anxious attachment making neutral actions feel like threats.</p>
+
+                        <h4>Insecurity spirals:</h4>
+                        <p>You assume they think your interests are stupid, that they're talking to someone else when busy, that decreased sex means infidelity. These are YOUR stories, not evidence.</p>
+
+                        <h4>Taking blame for their manipulation:</h4>
+                        <p>When they call you "too sensitive" or keep bringing up your past mistakes, you think you need to explain better or that you deserve it. You're absorbing responsibility for THEIR tactics.</p>
+
+                        <h3>What THEY'RE actually doing:</h3>
+                        <ul>
+                            <li><strong>Gaslighting you</strong> - Telling you things "never happened" or you're "remembering wrong"</li>
+                            <li><strong>Violating your boundaries</strong> - Getting upset or making you feel guilty when you set boundaries</li>
+                            <li><strong>Selective "forgetting"</strong> - Remembering what matters to them but forgetting what matters to you</li>
+                            <li><strong>Comparative devaluation</strong> - Comparing you unfavorably to others to make you feel inadequate</li>
+                        </ul>
+
+                        <h3>The toxic loop you're in:</h3>
+                        <p class="arrow">→ They DO harmful things (gaslighting, boundary violations, weaponizing your past)<br>
+                        → You correctly identify some of it BUT also take blame for their tactics<br>
+                        → Your anxiety makes you hypervigilant about normal things<br>
+                        → They use your "overreactions" to dismiss your valid concerns<br>
+                        → You can't tell anymore what's real harm vs your anxiety<br>
+                        → You're exhausted, confused, and think you're the problem<br>
+                        → Repeat</p>
+
+                        <h3>How this lands on THEM:</h3>
+                        <p>Your anxious patterns probably make you:</p>
+                        <ul>
+                            <li>Text repeatedly when they don't respond (feels suffocating)</li>
+                            <li>Need constant reassurance (exhausting, they feel responsible for your emotional state)</li>
+                            <li>Question normal autonomy (they can't have basic independence without you panicking)</li>
+                            <li>Interpret everything through insecurity (they feel constantly accused)</li>
+                        </ul>
+
+                        <h3>How their behavior lands on YOU:</h3>
+                        <p>Their toxic patterns make you:</p>
+                        <ul>
+                            <li>Question your own memory and perception (the gaslighting)</li>
+                            <li>Unable to set boundaries (they punish you emotionally when you try)</li>
+                            <li>Constantly anxious (never sure if concerns are valid or "overreactions")</li>
+                            <li>Taking responsibility for their behavior (you think better communication would stop the invalidation)</li>
+                        </ul>
+
+                        <h3>The brutal truth:</h3>
+                        <p><strong>Both things are happening:</strong></p>
+                        <ol>
+                            <li>You have anxious attachment that needs work (not because you're bad, but because it's making YOU miserable)</li>
+                            <li>They are manipulating you (the gaslighting, boundary violations, weaponizing past are real harm)</li>
+                            <li>Your anxiety gives them ammunition (when you overreact to normal stuff, they use it to dismiss VALID concerns)</li>
+                            <li>You can't heal your anxiety while being gaslit (almost impossible to regulate while someone rewrites reality)</li>
+                        </ol>
+
+                        <h3>What you actually need:</h3>
+                        <p><strong>FIRST: Learn to tell the difference</strong></p>
+                        <ul>
+                            <li>Going to bed early, not texting for hours, wanting friend time = NORMAL (your anxiety is the problem)</li>
+                            <li>Gaslighting, punishing boundaries, weaponizing past = TOXIC (your concern is valid)</li>
+                        </ul>
+
+                        <p><strong>SECOND: Work on YOUR patterns</strong> (not because you deserve abuse, but because your anxiety is torturing you)</p>
+                        <ul>
+                            <li>Anxious attachment healing</li>
+                            <li>Learning to self-soothe instead of seeking constant reassurance</li>
+                            <li>Building identity outside the relationship</li>
+                        </ul>
+
+                        <p><strong>THIRD: Decide if you can stay</strong></p>
+                        <ul>
+                            <li>Can you set boundaries with someone who punishes boundaries?</li>
+                            <li>Can you heal anxiety while being gaslit?</li>
+                            <li>Are you willing to do YOUR work while they refuse to do theirs?</li>
+                        </ul>
+
+                        <h3>The question only you can answer:</h3>
+                        <p>Are you willing to work on your anxiety <strong>while also acknowledging they're harming you?</strong></p>
+                        <p>Or are you going to keep using "but I'm anxious" to excuse staying with someone who gaslights you?</p>
+                        <p><strong>Both your patterns and their abuse are real. The work is yours. The choice to stay or go is also yours.</strong></p>
+
+                        <a href="#" class="cta-button">Get Help for Anxious Attachment & Toxic Dynamics</a>
+                    </div>
+                `;
+            }
+
+            // Result D: You're The Problem
+            if (anxious >= 6 && boundary <= 1 && accurate >= 5 && secure <= 2) {
+                return `
+                    <div class="result-header">
+                        <h1 class="result-title">You're The Problem</h1>
+                        <p class="result-subtitle">Your partner might actually need protection from you</p>
+                    </div>
+                    <div class="result-content">
+                        <p>You came here looking to confirm your partner is a narcissist. Your answers suggest something different: <strong>You're the one who can't handle normal boundaries, needs constant validation, and interprets everything as a threat.</strong></p>
+
+                        <h3>What your answers revealed:</h3>
+                        <p>You think it's a problem when your partner:</p>
+                        <ul>
+                            <li>Needs sleep instead of talking to you</li>
+                            <li>Takes hours to text back while at work or with friends</li>
+                            <li>Wants to spend time with other people</li>
+                            <li>Doesn't post about you on social media</li>
+                            <li>Mentions an ex in neutral conversation</li>
+                            <li>Has interests you don't share</li>
+                            <li>Disagrees with you about something</li>
+                        </ul>
+
+                        <p><strong>None of these things are problems. These are normal, healthy boundaries.</strong></p>
+
+                        <h3>But you also correctly identified manipulation:</h3>
+                        <p>When presented with gaslighting, boundary violations, and weaponizing past mistakes, you knew exactly what those were. Which means <strong>you're not confused about what abuse looks like - you just can't handle normal relationship dynamics.</strong></p>
+
+                        <h3>How this is landing on your partner:</h3>
+                        <ul>
+                            <li>They can't have basic autonomy without you panicking</li>
+                            <li>They feel responsible for your constant emotional crises</li>
+                            <li>They're being accused of cheating/avoiding you for living their life</li>
+                            <li>They feel suffocated by your need for constant contact and validation</li>
+                            <li>They can't disagree with you without you taking it as rejection</li>
+                        </ul>
+
+                        <h3>The brutal truth:</h3>
+                        <p><strong>Your partner isn't a narcissist. You're anxiously attached to the point where you're controlling, overwhelming, and making their normal needs about you.</strong></p>
+
+                        <p>That doesn't make you evil. But it does make you the problem in this dynamic.</p>
+
+                        <h3>What you need to hear:</h3>
+                        <ul>
+                            <li>Your partner going to bed early is not abandonment</li>
+                            <li>Not texting for hours while at work is not avoidance</li>
+                            <li>Wanting time with friends is not choosing them over you</li>
+                            <li>Not posting on social media is not hiding you</li>
+                            <li>Having their own interests is not thinking yours are stupid</li>
+                        </ul>
+
+                        <p><strong>These are normal human needs, and you're treating them like betrayals.</strong></p>
+
+                        <h3>What you actually need:</h3>
+                        <ul>
+                            <li><strong>Intensive therapy for anxious attachment</strong> - Not couples therapy, INDIVIDUAL work</li>
+                            <li><strong>Build a life outside this relationship</strong> - Your world is dangerously small</li>
+                            <li><strong>Learn to self-soothe</strong> - Your partner can't fix your anxiety</li>
+                            <li><strong>Consider if YOU should be in a relationship right now</strong> - You might need to work on yourself before you're ready for partnership</li>
+                        </ul>
+
+                        <p>The good news: <strong>This is fixable if you're willing to own it.</strong> But first you have to stop blaming your partner for having normal boundaries.</p>
+
+                        <a href="#" class="cta-button">Get Help With Anxious Attachment</a>
+                    </div>
+                `;
+            }
+
+            // Result E: Mutually Toxic Hellscape
+            if (anxious >= 5 && boundary >= 4 && accurate <= 2 && secure <= 2) {
+                return `
+                    <div class="result-header">
+                        <h1 class="result-title">Mutually Toxic Hellscape</h1>
+                        <p class="result-subtitle">This relationship is destroying you and you're participating in your own destruction</p>
+                    </div>
+                    <div class="result-content">
+                        <p>Your answers revealed the worst possible combination: <strong>You're anxious, you're excusing their abuse, and you can't tell what's real anymore.</strong></p>
+
+                        <h3>What's happening:</h3>
+                        <p><strong>You're bringing extreme anxiety:</strong></p>
+                        <ul>
+                            <li>Panicking when they need basic autonomy</li>
+                            <li>Catastrophizing every normal behavior as threat</li>
+                            <li>Making their independence about your worth</li>
+                        </ul>
+
+                        <p><strong>They're bringing active harm:</strong></p>
+                        <ul>
+                            <li>Gaslighting (and you're believing it)</li>
+                            <li>Punishing boundaries (and you think your boundaries are wrong)</li>
+                            <li>Weaponizing your past (and you think you deserve it)</li>
+                            <li>Selective memory (and you're making excuses for them)</li>
+                        </ul>
+
+                        <p><strong>You can't tell the difference:</strong></p>
+                        <p>You scored high on anxiety AND high on excusing abuse AND low on accurately identifying manipulation. This means you're both overreacting to normal things AND under-reacting to harmful things. <strong>You have no accurate read on reality anymore.</strong></p>
+
+                        <h3>The toxic cycle:</h3>
+                        <p class="arrow">→ Your anxiety makes you pursue/panic/demand reassurance<br>
+                        → They use manipulation tactics to control/dismiss/gaslight you<br>
+                        → You can't tell if you're overreacting or being harmed<br>
+                        → You apologize for having needs<br>
+                        → They escalate the harm<br>
+                        → Your anxiety gets worse<br>
+                        → You pursue harder<br>
+                        → They withdraw or punish<br>
+                        → Repeat until one of you breaks</p>
+
+                        <h3>How you're both making it worse:</h3>
+                        <p><strong>Your patterns fuel their tactics:</strong> Your anxiety gives them ammunition to call you "crazy" or "too much." Your constant need for reassurance exhausts them and makes them withdraw, which confirms your worst fears.</p>
+
+                        <p><strong>Their tactics fuel your anxiety:</strong> Their gaslighting makes you doubt your perception. Their boundary violations make you more vigilant. Their punishment of your needs makes you more desperate for validation.</p>
+
+                        <p><strong>Neither of you can heal while doing this to each other.</strong></p>
+
+                        <h3>The brutal truth:</h3>
+                        <p>This relationship is not survivable in its current form. You're both destroying each other, and you've lost the ability to tell what's normal vs what's harmful.</p>
+
+                        <p>You need professional intervention, not a quiz result.</p>
+
+                        <h3>What you actually need:</h3>
+                        <ul>
+                            <li><strong>Individual therapy IMMEDIATELY</strong> - Not couples therapy, you both need your own work</li>
+                            <li><strong>Separation to get clarity</strong> - You can't see anything clearly while in this daily</li>
+                            <li><strong>Trauma bond breaking</strong> - You're biochemically addicted to this cycle</li>
+                            <li><strong>Reality testing with people outside the relationship</strong> - Your normal meter is broken</li>
+                            <li><strong>Honest assessment: Can this relationship be saved?</strong> - Sometimes the answer is no</li>
+                        </ul>
+
+                        <p><strong>You can't fix this with better communication. You can't heal your anxiety while being gaslit. You can't work on yourself while actively being harmed.</strong></p>
+
+                        <p>Something has to change radically, or this will break you both.</p>
+
+                        <a href="#" class="cta-button">Get Crisis Support Now</a>
+                    </div>
+                `;
+            }
+
+            // Result F: You're Describing Abuse
+            if (anxious <= 3 && boundary >= 5 && accurate <= 1 && secure <= 2) {
+                return `
+                    <div class="result-header">
+                        <h1 class="result-title">You're Describing Abuse</h1>
+                        <p class="result-subtitle">Your answers don't show anxious overreactions - they show someone who's been systematically broken down</p>
+                    </div>
+                    <div class="result-content">
+                        <p><strong>You didn't come here anxious. You came here already destroyed by someone who's convinced you that their abuse is your fault.</strong></p>
+
+                        <h3>What your answers revealed:</h3>
+                        <p>You took blame for EVERY SINGLE manipulative tactic:</p>
+                        <ul>
+                            <li>When they call you "too sensitive" → You think you should calm down</li>
+                            <li>When they weaponize your past → You think you haven't apologized enough</li>
+                            <li>When they "forget" what matters to you → You think you should make it easier for them</li>
+                            <li>When they punish your boundaries → You think your boundaries are unreasonable</li>
+                            <li>When they rewrite history → You doubt your own memory</li>
+                            <li>When they compare you unfavorably → You think you should work harder to be good enough</li>
+                        </ul>
+
+                        <p><strong>These aren't "relationship problems." This is systematic abuse, and you've been trained to blame yourself for all of it.</strong></p>
+
+                        <h3>But you also didn't show anxious patterns:</h3>
+                        <p>You weren't catastrophizing about them going to bed early, not texting for hours, or spending time with friends. You didn't interpret normal behavior as threats.</p>
+
+                        <p><strong>This means you're not an anxious person making mountains out of molehills. You're a person whose reality has been systematically dismantled.</strong></p>
+
+                        <h3>What's been done to you:</h3>
+                        <ul>
+                            <li><strong>Gaslighting</strong> - They've convinced you that your memory is faulty and your perception is wrong</li>
+                            <li><strong>Invalidation</strong> - They've trained you to believe your feelings are overreactions</li>
+                            <li><strong>Boundary destruction</strong> - They've made you feel guilty for having any needs</li>
+                            <li><strong>Weaponized guilt</strong> - They keep you paying forever for past mistakes</li>
+                            <li><strong>Devaluation</strong> - They compare you to others to keep you feeling inadequate</li>
+                        </ul>
+
+                        <h3>Why you can't see it:</h3>
+                        <p>You've been trained to:</p>
+                        <ul>
+                            <li>Doubt your own perception (gaslighting works)</li>
+                            <li>Take responsibility for their behavior (you think better communication would fix it)</li>
+                            <li>Believe your needs are unreasonable (you've been punished for having them)</li>
+                            <li>Accept treatment that violates your boundaries (you think you're asking too much)</li>
+                        </ul>
+
+                        <p><strong>Your "boundary deficits" aren't character flaws. They're the result of being systematically trained to have no boundaries.</strong></p>
+
+                        <h3>The brutal truth:</h3>
+                        <p>You're not in a difficult relationship. You're not just anxious. <strong>You're being abused, and you've been gaslit into thinking you're the problem.</strong></p>
+
+                        <h3>What you need to understand:</h3>
+                        <ul>
+                            <li>You're not "too sensitive" - you're being dismissed</li>
+                            <li>You don't owe infinite apologies - they're weaponizing your guilt</li>
+                            <li>Your boundaries aren't unreasonable - they're being violated</li>
+                            <li>Your memory isn't faulty - it's being rewritten</li>
+                            <li>You're not inadequate - you're being devalued</li>
+                        </ul>
+
+                        <p><strong>None of this is your fault. But staying is your choice.</strong></p>
+
+                        <h3>What you actually need:</h3>
+                        <ul>
+                            <li><strong>Safety assessment</strong> - Is it safe for you to leave? Do you need help?</li>
+                            <li><strong>Support system activation</strong> - Tell people outside this relationship what's happening</li>
+                            <li><strong>Professional help</strong> - Trauma-informed therapy with someone who understands abuse</li>
+                            <li><strong>Exit strategy</strong> - Even if you're not ready to leave, know what leaving would look like</li>
+                            <li><strong>Reality anchoring</strong> - Document things, talk to people who can reflect reality back to you</li>
+                        </ul>
+
+                        <p><strong>You deserve better than this. You didn't cause this. You can't fix this by being better.</strong></p>
+
+                        <a href="#" class="cta-button">Get Help Leaving an Abusive Relationship</a>
+                    </div>
+                `;
+            }
+
+            // Result G: Mostly Healthy
+            if (anxious <= 3 && boundary <= 2 && accurate >= 4 && secure >= 4) {
+                return `
+                    <div class="result-header">
+                        <h1 class="result-title">You're Mostly Healthy</h1>
+                        <p class="result-subtitle">You're secure, you can spot manipulation, and you don't overreact to normal behavior</p>
+                    </div>
+                    <div class="result-content">
+                        <p>Your answers revealed something unusual for this quiz: <strong>You're actually pretty secure in relationships.</strong></p>
+
+                        <h3>What your answers showed:</h3>
+                        <ul>
+                            <li>You don't catastrophize when your partner needs sleep, space, or time with friends</li>
+                            <li>You recognize normal autonomy as healthy, not threatening</li>
+                            <li>You can spot actual manipulation (gaslighting, boundary violations, weaponizing past)</li>
+                            <li>You don't take inappropriate responsibility for their behavior</li>
+                            <li>You give people space to process without making it about you</li>
+                        </ul>
+
+                        <h3>Two possibilities:</h3>
+                        <p><strong>Possibility 1: You're in a healthy relationship</strong><br>
+                        Your partner has normal boundaries, you respect them, and you both handle conflict without manipulation. If this is true, you don't need this quiz - you're doing fine.</p>
+
+                        <p><strong>Possibility 2: You've done significant healing work</strong><br>
+                        You used to be anxious or struggled with boundaries, but you've worked on yourself and developed security. You might still have moments of insecurity, but overall you're operating from a healthy place.</p>
+
+                        <h3>Why you might have taken this quiz:</h3>
+                        <p>If you're this secure, you probably took this quiz because:</p>
+                        <ul>
+                            <li>Someone accused YOU of being the narcissist and you're checking</li>
+                            <li>You're worried about a friend's relationship and wanted perspective</li>
+                            <li>You're just curious about relationship dynamics</li>
+                            <li>You wanted confirmation that you're not crazy for having boundaries</li>
+                        </ul>
+
+                        <h3>If you're still concerned:</h3>
+                        <p>Secure people can still have anxious moments. Having occasional insecurity doesn't negate your overall health. The difference is:</p>
+                        <ul>
+                            <li><strong>Anxious attachment:</strong> Constantly catastrophizing, making everything about you, unable to give space</li>
+                            <li><strong>Secure with moments of anxiety:</strong> Occasional worry that you can reality-check and self-soothe</li>
+                        </ul>
+
+                        <p>You're showing the second pattern, not the first.</p>
+
+                        <h3>What you might need (if anything):</h3>
+                        <ul>
+                            <li>Continue whatever healing work got you here</li>
+                            <li>Use your secure attachment to help others see what healthy looks like</li>
+                            <li>Stay vigilant about recognizing manipulation if it shows up</li>
+                            <li>Trust your ability to spot red flags - you clearly can</li>
+                        </ul>
+
+                        <p><strong>The bottom line: You're doing well. Keep doing what you're doing.</strong></p>
+
+                        <a href="#" class="cta-button">Learn More About Secure Attachment</a>
+                    </div>
+                `;
+            }
+
+            // Default fallback
+            return `
+                <div class="result-header">
+                    <h1 class="result-title">Your Results</h1>
+                    <p class="result-subtitle">A mixed pattern that needs personalized interpretation</p>
+                </div>
+                <div class="result-content">
+                    <p>Your answer pattern shows a complex mix that doesn't fit cleanly into one category. This might mean:</p>
+                    <ul>
+                        <li>You're in a transitional phase of healing</li>
+                        <li>Your relationship has elements of multiple dynamics</li>
+                        <li>You need more personalized guidance to understand your specific pattern</li>
+                    </ul>
+                    <p>Your scores:</p>
+                    <ul>
+                        <li>Anxious patterns: ${anxious}/7</li>
+                        <li>Boundary deficits: ${boundary}/6</li>
+                        <li>Accurate assessments: ${accurate}/6</li>
+                        <li>Secure responses: ${secure}/6</li>
+                    </ul>
+                    <a href="#" class="cta-button">Get Personalized Support</a>
+                </div>
+            `;
+        }
+    </script>
+</body>
+</html>
